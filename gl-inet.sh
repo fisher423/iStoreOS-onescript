@@ -41,7 +41,7 @@ install_istore_os_style() {
 	# 安装磁盘管理
 	is-opkg install 'app-meta-diskman'
 	FILE_PATH="/etc/openwrt_release"
-	NEW_DESCRIPTION="Openwrt like iStoreOS Style by wukongdaily"
+	NEW_DESCRIPTION="Openwrt like iStoreOS Style by fisher423"
 	CONTENT=$(cat $FILE_PATH)
 	UPDATED_CONTENT=$(echo "$CONTENT" | sed "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/")
 	echo "$UPDATED_CONTENT" >$FILE_PATH
@@ -161,7 +161,7 @@ add_dhcp_domain() {
 
 #添加出处信息
 add_author_info() {
-	uci set system.@system[0].description='wukongdaily'
+	uci set system.@system[0].description='fisher423'
 	uci set system.@system[0].notes='文档说明:
     https://wkdaily.cpolar.cn/'
 	uci commit system
@@ -489,7 +489,7 @@ while true; do
 	result=$gl_name"一键iStoreOS风格化"
 	result=$(echo "$result" | sed 's/ like iStoreOS//')
 	echo "***********************************************************************"
-	echo "*      一键安装工具箱(for gl-inet Router) v1.1 by @wukongdaily        "
+	echo "*      一键安装工具箱(for gl-inet Router) v1.1 by @fisher423        "
 	echo "**********************************************************************"
 	echo "*      当前的路由器型号: "$gl_name | sed 's/ like iStoreOS//'
 	echo
