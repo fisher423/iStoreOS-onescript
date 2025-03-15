@@ -41,7 +41,7 @@ install_istore_os_style() {
 	# 安装磁盘管理
 	is-opkg install 'app-meta-diskman'
 	FILE_PATH="/etc/openwrt_release"
-	NEW_DESCRIPTION="Openwrt like iStoreOS Style by wukongdaily"
+	NEW_DESCRIPTION="Openwrt like iStoreOS Style by fisher423"
 	CONTENT=$(cat $FILE_PATH)
 	UPDATED_CONTENT=$(echo "$CONTENT" | sed "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/")
 	echo "$UPDATED_CONTENT" >$FILE_PATH
@@ -82,7 +82,7 @@ do_istore() {
 }
 
 #设置风扇工作温度
-setup_cpu_fans() {
+#setup_cpu_fans() {
 	#设定温度阀值,cpu高于48度,则风扇开始工作
 	uci set glfan.@globals[0].temperature=48
 	uci set glfan.@globals[0].warn_temperature=48
@@ -142,7 +142,7 @@ setup_software_source() {
 }
 
 # 添加主机名映射(解决安卓原生TV首次连不上wifi的问题)
-add_dhcp_domain() {
+#add_dhcp_domain() {
 	local domain_name="time.android.com"
 	local domain_ip="203.107.6.88"
 
@@ -161,9 +161,9 @@ add_dhcp_domain() {
 
 #添加出处信息
 add_author_info() {
-	uci set system.@system[0].description='wukongdaily'
+	uci set system.@system[0].description='fisher423'
 	uci set system.@system[0].notes='文档说明:
-    https://wkdaily.cpolar.cn/'
+    https://github.com/fisher423/iStoreOS-onescript'
 	uci commit system
 }
 
