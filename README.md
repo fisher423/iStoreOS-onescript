@@ -36,7 +36,7 @@
 ### 1. SSH连接到路由器,或者在路由器终端执行如下命令
 
 ```bash
-wget -O gl-inet.sh https://github.com/fisher423/iStoreOS-onescript/blob/0da3018fe46e212d721c9b4b819ddb89f41f4e63/gl-inet.sh && chmod +x gl-inet.sh && ./gl-inet.sh
+wget -O gl-inet.sh https://raw.gitmirror.com/fisher423/iStoreOS-onescript/refs/heads/master/gl-inet.sh && chmod +x gl-inet.sh && ./gl-inet.sh
 ```
 
 ### 下次如何调用?输入快捷键 g 即可
