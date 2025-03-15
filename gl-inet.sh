@@ -82,7 +82,7 @@ do_istore() {
 }
 
 #设置风扇工作温度
-#setup_cpu_fans() {
+setup_cpu_fans() {
 	#设定温度阀值,cpu高于48度,则风扇开始工作
 	uci set glfan.@globals[0].temperature=48
 	uci set glfan.@globals[0].warn_temperature=48
